@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/style.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="logo"><img src="./public/logo-red.png" alt=""></div>
+    <button onclick="getCommand()" class="btn btn-command">生成口令</button>
+    <button onclick="unZip()" class="btn btn-unzip">解压文件</button>
+    <!-- <button onclick="zip()">生成压缩包</button> -->
+    <!-- <button onclick="deleteZip()">删除压缩包</button> -->
+    <script charset="utf-8">
+        function zip() {
+            fetch('http://localhost:15118/zip')
+                .then(res => console.log(res.json()))
+                .then(json => console.log(json))
+                .catch(err => console.log('Request Failed', err));
+        };
+
+        async function unZip() {
+            let url = 'http://localhost:15118/unzip';
+            try {
+                let response = await fetch(url);
+                const res = await response.json();
+                alert(res.message);
+                return res;
+            } catch (error) {
+                console.log('Request Failed', error);
+            }
+        };
+
+        async function getCommand() {
+            let url = 'http://localhost:15118/getcommand';
+            try {
+                let response = await fetch(url);
+                const res = await response.json();
+                alert(res.message);
+                return res;
+            } catch (error) {
+                console.log('Request Failed', error);
+            }
+        };
+
+        async function deleteZip() {
+            let url = 'http://localhost:15118/deletezip';
+            try {
+                let response = await fetch(url);
+                const res = await response.json();
+                return res;
+            } catch (error) {
+                console.log('Request Failed', error);
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+dist
+node_modules
+package-lock.json
+.DS_Store
+npm-debug.log
+.idea
+test.js
+.tar
+yarn-error.log
+out/*
+dist/*
