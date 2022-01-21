@@ -11,8 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "build": {
-    "appId": "www.nanjiren.com",
-    "productName": "anti-fake-unzip",
+    "appId": "www.xxx.com",
+    "productName": "unzip",
     "copyright": "",
     "directories": {
       "output": "dist"

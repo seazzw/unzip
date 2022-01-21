@@ -1,4 +1,4 @@
-# njr-anti-fake-unzip
+# unzip
 
 > 基于 node、express、electron 的桌面端程序
 
