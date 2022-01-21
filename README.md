@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-git clone git@192.168.1.161:frontend/njr-anti-fake-unzip.git <your_project_name>
+git clone git@github.com:seazzw/unzip.git <your_project_name>
 ```
 
 使用 NPM 安装依赖:
